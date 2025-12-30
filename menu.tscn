@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4mp7g8apdbft"]
+
+[ext_resource type="Script" uid="uid://b3nnsvpqv5737" path="res://menu.gd" id="1_lti8b"]
+
+[node name="menù" type="Node2D"]
+script = ExtResource("1_lti8b")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="start" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 49.0
+offset_right = 252.0
+offset_bottom = 80.0
+text = "start"
+
+[node name="settings" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 93.0
+offset_right = 274.0
+offset_bottom = 124.0
+text = "settings"
+
+[node name="quit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 136.0
+offset_right = 245.0
+offset_bottom = 167.0
+text = "quit"
+
+[connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
